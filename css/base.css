@@ -1,0 +1,118 @@
+*,
+::before,
+::after {
+	margin:0;
+	padding:0;
+	/*清楚点击默认的高亮效果*/
+	-webkit-tap-highlight-color: transparent;
+	/*以你的border开始计算你的宽度   百分比布局*/
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	/*第二个是手机的一个默认的字体*/
+	font-family: "微软雅黑",sans-serif;
+	color:#000;
+}
+
+a {
+	text-decoration: none;
+    color:#000;	
+}
+
+ul {
+	list-style: none;
+}
+
+input,textarea {
+	border: none;
+	/*不让它伸缩*/
+   resize: none;
+   /*清楚默认选中的效果*/
+   outline: none;	
+   /*清楚浏览器默认的样式*/
+   -webkit-appearance:none;
+}
+
+/*清楚浮动*/
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+[class^='icon'] {
+	background: url('../images/sprites.png') no-repeat;
+	/*缩放使logo更精细   整体缩放2倍*/
+	background-size: 200px 200px;
+}
+
+
+/*公共的头部通栏*/
+/*头部通栏*/
+.jd_topBar {
+	width: 100%;
+	height: 45px;
+	border-bottom: 1px solid #e0e0e0;
+    background: url("../images/header-bg.png") repeat-x;
+    /*使图片更细腻，缩小2倍*/
+    background-size: 1px 44px;
+    position: absolute;
+    z-index: 1000;
+}
+/*返回按钮*/
+.jd_topBar .icon_back {
+	display: block;
+	/*为了使图片更加细腻，缩小2倍*/
+	background-position: -20px 0;
+	width: 20px;
+	height:20px;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top:10px;
+}
+/*搜索*/
+.jd_topBar h3 {
+	line-height: 45px;
+	font-size: 16px;
+	text-align: center;
+	font-family: sans-serif;
+    font-weight: inherit;
+}
+.jd_topBar form {
+	width: 100%;
+	height: 44px;
+	padding: 6px 32px 6px 25px;
+}
+.jd_topBar form input {
+	width: 100%;
+	height: 32px;
+	border: 1px solid #888;
+	border-radius: 6px;
+}
+
+/*返回菜单*/
+.jd_topBar .icon_menu {
+	display: block;
+	/*为了使图片更加细腻，缩小2倍*/
+	background-position: -60px 0;
+	position: absolute;
+	top: 0;
+	right: -8px;
+	/*为了用户体验更好，按钮设置大点方便点击*/
+	/*本来宽是20 高24设置padding宽高都加大，然后在裁剪content部分*/
+	width: 44px;
+	height:40px;
+	padding: 10px 12px;	
+	background-clip: content-box;
+	background-origin: content-box;
+}
+/*头部通栏*/
+
